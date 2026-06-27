@@ -15,6 +15,11 @@ jobs:
     steps: 
       - name: Chekcout/code the clone
         uses: actions/checkout@v7
+  # this step install python install 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
 # this step will install linting tool
       - name: install linter
         run: pip install ruff
