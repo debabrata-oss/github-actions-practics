@@ -1,0 +1,18 @@
+#what is the  goal of your  workflow
+#Gola: whenever some one changes the python code,
+# the linter will check if the syntax ,format, indentation (linting) is correct or not .
+name: Auto Linter
+
+on: 
+  push:
+     paths: "*.py"
+
+
+jobs:
+  code: 
+    runs-on: ubuntu-latest
+    # this step automatilly clone the code of the current branch into the runner
+    steps: 
+      - name: Chekcout/code the clone
+        uses: actions/checkout@v7
+        
